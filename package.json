@@ -4,7 +4,10 @@
   "description": "Simple app to get an email from api req and send it via gmail api using redis queueing",
   "main": "mailapp.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --fix --ignore-path .gitignore . && echo Lint done.",
+    "pretest": "npm run lint",
+    "test": "jest ./test --passWithNoTests",
+    "start": "node mailapp.js"
   },
   "keywords": [
     "test-task",
@@ -26,5 +29,25 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "rules": {
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ]
+    }
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
   }
 }
