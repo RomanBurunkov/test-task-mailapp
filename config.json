@@ -1,4 +1,8 @@
 {
+  "gSender": {
+    "queueInterval": 1000,
+    "queueSendInterval": 15000
+  },
   "gapi": {
     "scopes": [
       "https://mail.google.com/",
@@ -10,5 +14,9 @@
       "token": "token.json",
       "credentials": "credentials.json"
     }
+  },
+  "redis": {
+    "port": 6379,
+    "host": "127.0.0.1"
   }
 }
