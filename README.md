@@ -22,3 +22,19 @@ Run 'node gapiauth.js' to generate a toke file(follow the instructions).
 Run 'npm start' to start.
 
 For troubleshooting use 'npm run logs' to check app logs.
+
+## Usage
+
+App settings could be changed in config.json.
+
+Send message example:
+
+```
+curl --location --request POST 'HOST:3000/send' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "to": "address@gmail.com",
+    "subject": "Test email from the mailapp 11",
+    "message": "This is a test email55555567"
+}'
+```
