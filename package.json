@@ -7,7 +7,11 @@
     "lint": "eslint --fix --ignore-path .gitignore . && echo Lint done.",
     "pretest": "npm run lint",
     "test": "jest ./test --passWithNoTests",
-    "start": "node mailapp.js"
+    "stop": "./node_modules/pm2/bin/pm2 stop ecosystem.config.js",
+    "logs": "./node_modules/pm2/bin/pm2 logs",
+    "flush": "./node_modules/pm2/bin/pm2 flush",
+    "start": "./node_modules/pm2/bin/pm2 start ecosystem.config.js",    
+    "restart": "./node_modules/pm2/bin/pm2 restart ecosystem.config.js"
   },
   "keywords": [
     "test-task",
@@ -19,9 +23,12 @@
   "author": "Roman Burunkov <romon2002@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "googleapis": "^64.0.0",
     "mongodb": "^3.6.3",
+    "pm2": "^4.5.0",
     "redis": "^3.0.2"
   },
   "devDependencies": {
