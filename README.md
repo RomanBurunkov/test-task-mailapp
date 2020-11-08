@@ -3,7 +3,7 @@
 App should:
 
 * Use Express, Redis, MongoDb.
-* Have one route to get the following data: email addres, email subject, email body.
+* Have one route to get the following data: email address, email subject, email body.
 * Validate incoming data, store it into DB and send email via Google Gmail API.
 * Use Redis to place incoming emails into queue and should take them from queue one by one to send.
 
