@@ -1,5 +1,11 @@
 const fs = require('fs');
 
+// Проверка является ли переменная объектом.
+const isObject = (obj) => (obj === null || obj === undefined
+  ? false
+  : typeof obj === 'object'
+);
+
 // Добавляем 0, для величин меньше 10.
 const pad = (n) => (n < 10 ? `0${n}` : n);
 // Вывод локальных даты и времени в ISO формате.
@@ -67,6 +73,7 @@ function getToken(path = 'token.json') {
 }
 
 exports.log = log;
+exports.isObject = isObject;
 exports.getToken = getToken;
 exports.getConfig = getConfig;
 exports.getCredentials = getCredentials;
