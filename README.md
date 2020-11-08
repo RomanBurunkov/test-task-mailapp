@@ -8,7 +8,7 @@ App should:
 * Use Redis to place incoming emails into queue and should take them from queue one by one to send.
 
 
-#Installation
+## Installation
 
 Install Node, Redis & MongoDB.
 bin/install.sh could help with that.
